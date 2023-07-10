@@ -1,0 +1,242 @@
+:root {
+    --blue: #1E1AF0;
+    --white: #ffffff;
+    --green: #2B9E03;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background: none;
+    height: 68px;
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar__logo {
+    width: fit-content;
+    padding-left: 1rem;
+}
+
+.navbar__button1 {
+    padding: 1rem 3rem;
+    border: none;
+    background: none;
+    color: var(--blue);
+    font-size: 1rem;
+    cursor: pointer;
+    outline-color: #1E1AF0;
+    outline-style: auto;
+    transition: 0.3s ease;
+    text-decoration: none;
+    margin-right: 1rem;
+    border-radius: 10px;
+}
+
+.navbar__button {
+    padding: 1rem 3rem;
+    border: none;
+    background: linear-gradient(to bottom right, #1E1AF0, #05044D);
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.navbar__link {
+    color: var(--black);
+    text-decoration: none;
+    padding: 0rem 1rem;
+}
+
+.navbar__link:hover {
+    color: var(--green);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar__link {
+        display: none;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 100px);
+        position: absolute;
+        width: 100%;
+        top: -1000px;
+    }
+
+    .navbar__menu.active {
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+        height: 100vh;
+        font-size: 1.5rem;
+        background: var(--black);
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: var(--blue);
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url(images/eco1.png);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero__content {
+    color: var(--black);
+    padding: 8rem 8rem;
+    line-height: 1;
+    margin: auto;
+    margin-top: 200px;
+    width: 50%;
+    padding: 10px
+}
+
+.hero__content h1 {
+    font-size: clamp(2rem, 3vw, 4rem);
+    text-transform: none;
+    margin-bottom: 1rem;
+
+
+}
+
+.text__style {
+    text-decoration: none;
+    color: #1E1AF0;
+    text-shadow: 1px 1px 20px green, 0 0 50px green;
+}
+
+.hero__content p {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    margin-bottom: 3rem;
+}
+
+.button {
+    padding: 1rem 3rem;
+    border: none;
+    background: linear-gradient(to bottom right, #1E1AF0, #05044D);
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background: var(--black);
+}
+
+.flex {
+    display: flex;
+    background-color: none;
+}
+
+.flex > div {
+    background-color: none;
+    color: #1E1AF0;
+    margin: 10px;
+    padding: px;
+    font-size: 50px;
+    font-weight: 700;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.flex > div p {
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.flex2 {
+    display: flex;
+    width: 720px;
+    padding: 0rem 3rem;
+    border: 5px solid gray;
+    margin: 0;
+}
+
+.flex2 > div {
+    background-color: none;
+    color: #1E1AF0;
+    margin: 10px;
+    padding: 1px;
+    font-size: 15px;
+    font-weight: 700;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.flex2 > div p {
+    color: black;
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.search__button {
+    padding: 1rem 3rem;
+    border: none;
+    background: linear-gradient(to bottom right, #1E1AF0, #05044D);
+    -webkit-text-fill-color: var(--white);
+    font-size: 0.5rem;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease;
+    text-decoration: none;
+    border-radius: 0px;
+}
